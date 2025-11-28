@@ -1,0 +1,182 @@
+
+body {
+    font-family: "Times New Roman", Times, serif;
+}
+/* Style de la photo dans la section Profil */
+.profile-img-container {
+    text-align: center; /* Centrer la photo horizontalement sur mobile */
+}
+
+.profile-img {
+    width: 280px; /* Taille fixe pour la photo (à ajuster) */
+    height: 280px;
+    object-fit: cover; /* Assure que l'image remplit le cercle sans déformation */
+    border-radius: 50%; /* Rendre l'image circulaire */
+    border: 5px solid var(--bleu-fonce); /* Bordure accentuée en bleu foncé */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Ombre douce */
+}
+
+/* Style du bouton de téléchargement du CV */
+.btn-cv {
+    background-color: var(--bleu-fonce);
+    color: white;
+    border: 1px solid var(--bleu-fonce);
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    display: inline-flex; /* Permet d'aligner l'icône si on en ajoute une */
+    align-items: center;
+}
+
+.btn-cv:hover {
+    background-color: #34495E; /* Un bleu légèrement plus foncé au survol */
+    color: white;
+    transform: translateY(-2px); /* Léger effet de soulèvement au survol */
+    text-decoration: none; /* Enlève le soulignement du lien au survol */
+}
+
+
+/* Couleurs définies */
+:root {
+    --bleu-fonce: #2C3E50;
+    --beige: #F7F7F0;
+    --noir: #1E1E1E;
+}
+
+/* Style de la carte de compétence */
+.competence-card {
+    background-color: var(--beige);
+    border-radius: 15px; /* Bords arrondis */
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre de base */
+    transition: all 0.3s ease; /* Transition pour l'effet de survol */
+    height: 100%; /* S'assurer que les deux cartes ont la même hauteur */
+}
+
+/* Effet de survol (plus d'ombre, légère élévation) */
+.competence-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.competence-card h3 {
+    color: var(--bleu-fonce);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--bleu-fonce);
+    padding-bottom: 10px;
+}
+
+/* Style pour accentuer le niveau de langue */
+.language-level {
+    font-weight: bold;
+    color: var(--bleu-fonce); /* Utilisation de notre couleur d'accent bleu */
+    margin-left: 5px; /* Petit espacement */
+    font-style: italic;
+}
+
+.orange-line{
+    border: none;
+    border-top: 10px solid #2C3E50;
+    color:black;
+    overflow: visible;
+    text-align: center;
+    height: 29px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 33px;
+}
+.orange-line:before{
+    content: "Competences";
+    background-color:white;
+    padding: 0 10px;
+    position: relative;
+    top: -33px;
+}
+
+.orange-lin{
+    border: none;
+    border-top: 10px solid #2C3E50;
+    color:black;
+    overflow: visible;
+    text-align: center;
+    height: 29px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 33px;
+}
+.orange-lin:before{
+    content: "Projets";
+    background-color:white;
+    padding: 0 10px;
+    position: relative;
+    top: -33px;
+}
+
+/* Réutilisation du style competence-card pour les projets */
+.project-card {
+    background-color: var(--beige);
+    border-radius: 15px; /* Bords arrondis */
+    padding: 25px;
+    margin-bottom: 30px; /* Espace entre les lignes de projets */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%; /* Important pour aligner les cartes de même hauteur */
+    display: flex;
+    flex-direction: column; /* Permet au lien GitHub de rester en bas */
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.project-card h4 {
+    color: var(--bleu-fonce);
+    margin-bottom: 15px;
+}
+
+.project-link {
+    margin-top: auto; /* Pousse le lien vers le bas de la carte */
+    display: block;
+    color: var(--bleu-fonce);
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 10px;
+    border-top: 1px solid rgba(44, 62, 80, 0.2); /* Séparateur subtil */
+}
+
+.project-link:hover {
+    color: #34495E;
+    text-decoration: underline;
+}
+
+/* Styles pour les titres avec flèches */
+.section-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.section-title-container h2 {
+    margin: 0;
+    color: var(--bleu-fonce);
+}
+
+.arrow {
+    font-size: 2.5em; /* Grande taille pour la visibilité */
+    font-weight: bold;
+    color: var(--bleu-fonce);
+    margin: 0 15px; /* Espace entre la flèche et le titre */
+    line-height: 1; /* Assure le bon alignement vertical */
+}
+
+/* Style de la flèche allant de Gauche à Droite (Général) */
+.arrow-right {
+    /* Nous utiliserons le caractère Unicode U+27A1 (heavy black rightwards arrow) */
+}
+
+/* Style de la flèche allant de Droite à Gauche (Inversée pour Projets) */
+.arrow-left {
+    /* Nous utiliserons le caractère Unicode U+2B05 (leftwards black arrow) */
+}
